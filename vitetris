@@ -1,8 +1,12 @@
-softdrop=1
-rotate=3
-height=0
-level=0
 mode=1
+level=0
+height=0
+rotate=3
+softdrop=1
+[term]
+bgdot=
+drawing=0
+bg=0
 [stdin]
 left=h
 right=l
@@ -10,7 +14,3 @@ up=k
 down=j
 rot=k
 hdrop=32
-[term]
-bg=0
-drawing=0
-bgdot=
