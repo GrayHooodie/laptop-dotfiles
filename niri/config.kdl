@@ -271,8 +271,8 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "ashell"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "ghostty"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "kitty"
 spawn-at-startup "hypridle"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -390,10 +390,11 @@ binds {
     Mod+Shift+Slash hotkey-overlay-title="Show This Screen" { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open Terminal (kitty)" { spawn "ghostty"; }
+    Mod+T hotkey-overlay-title="Open Terminal (kitty)" { spawn "kitty"; }
     Mod+A hotkey-overlay-title="Application Menu" { spawn "fuzzel"; }
-    Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "hyprlock"; }
+    Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "hyprlock"; }
 	Mod+B hotkey-overlay-title="Open Browser (brave)" { spawn "brave"; }
+	Mod+M hotkey-overlay-title="Open youtui-player" { spawn-sh "kitty -e youtui-player"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
