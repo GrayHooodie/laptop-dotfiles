@@ -1,0 +1,40 @@
+position = "Top"
+layer = "Top"
+
+[modules]
+left = [ "Workspaces"]
+center = [ "Tempo", [ "MediaPlayer" ] ]
+right = [ "SystemInfo", [ "Privacy", "Settings" ] ]
+
+[tempo]
+clock_format = "%Y-%m-%d   |   %I:%M:%S  "
+#timezones = [ "America/Chicago" ]
+weather_location = "Current"
+weather_indicator = "None"
+
+[media_player]
+indicator_format = "Icon"
+
+[settings]
+indicators = [ "Audio", "Bluetooth", "Battery", "Network" ]
+audio_indicator_format = "IconAndPercentage"
+periferal_indicators = "All"
+
+[system_info]
+indicators = [ "Cpu", "Memory" ]
+interval = 2
+
+[appearance]
+font_name = "JetBrains Mono"
+scale_factor = 1.05
+style = "Solid"
+opacity = 0.8
+menu.opacity = 0.9
+
+background_color = "#191926"
+primary_color = "#304066"
+secondary_color = "#393939"
+workspace_colors = ["#efefff"]
+text_color = "#efefff"
+success_color = "#efefff"
+danger_color = "#ffcfcf"
