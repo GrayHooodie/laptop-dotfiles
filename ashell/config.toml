@@ -3,8 +3,8 @@ layer = "Top"
 
 [modules]
 left = [ "Workspaces"]
-center = [ "Tempo", [ "MediaPlayer" ] ]
-right = [ "SystemInfo", [ "Privacy", "Settings" ] ]
+center = [ "Tempo" ]
+right = [ [ "MediaPlayer" ], [ "SystemInfo" ], [ "Privacy", "Settings" ] ]
 
 [tempo]
 clock_format = "%Y-%m-%d   |   %I:%M:%S  "
