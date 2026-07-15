@@ -274,6 +274,7 @@ spawn-at-startup "ashell"
 spawn-at-startup "awww-daemon"
 spawn-at-startup "kitty"
 spawn-at-startup "hypridle"
+spawn-at-startup "~/Scripts/battery-monitor.sh"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -373,6 +374,11 @@ window-rule {
 	opacity 1.0
 }
 
+window-rule {
+	match app-id="darktable"
+	opacity 1.0
+}
+
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -392,8 +398,10 @@ binds {
     Mod+T hotkey-overlay-title="Open Terminal (kitty)" { spawn "kitty"; }
     Mod+A hotkey-overlay-title="Application Menu" { spawn "fuzzel"; }
     Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "hyprlock"; }
-	Mod+B hotkey-overlay-title="Open Browser (brave)" { spawn "brave"; }
-	Mod+M hotkey-overlay-title="Open youtui-player" { spawn-sh "kitty -e youtui-player"; }
+		Mod+B hotkey-overlay-title="Open Browser (brave)" { spawn "brave"; }
+		Mod+M hotkey-overlay-title="Open youtui-player" { spawn-sh "kitty -e youtui-player"; }
+		Mod+N { spawn-sh "~/Scripts/reload-dunst-config"; }
+		Mod+Shift+N { spawn-sh "~/Scripts/test-dunst"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -421,10 +429,10 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+20"; }
     Shift+XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+1"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5-"; }
-    Shift+XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "1-"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "20-"; }
+    Shift+XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "2-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,

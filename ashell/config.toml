@@ -16,8 +16,9 @@ weather_indicator = "None"
 indicator_format = "Icon"
 
 [settings]
-indicators = [ "Audio", "Bluetooth", "Battery", "Network" ]
+indicators = [ "Audio", "Bluetooth", "Battery", "Brightness", "Network" ]
 audio_indicator_format = "IconAndPercentage"
+brightness_indicator_format = "IconAndPercentage"
 periferal_indicators = "All"
 
 [system_info]
