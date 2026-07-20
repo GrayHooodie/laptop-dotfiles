@@ -400,8 +400,9 @@ binds {
     Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "hyprlock"; }
 		Mod+B hotkey-overlay-title="Open Browser (brave)" { spawn "brave"; }
 		Mod+M hotkey-overlay-title="Open youtui-player" { spawn-sh "kitty -e youtui-player"; }
-		Mod+N { spawn-sh "~/Scripts/reload-dunst-config"; }
-		Mod+Shift+N { spawn-sh "~/Scripts/test-dunst"; }
+		Mod+N { spawn-sh "~/Scripts/test-dunst low"; }
+		Mod+Shift+N { spawn-sh "~/Scripts/test-dunst normal"; }
+		Mod+Shift+Ctrl+N { spawn-sh "~/Scripts/test-dunst critical"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.

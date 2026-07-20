@@ -186,7 +186,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  literal %
     # Markup is allowed
-    format = "<u>%a</u>\n<b>%s</b>\n%b"
+    format = "<b>%s</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -273,14 +273,14 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 5
+    corner_radius = 10
 
     # Define which corners to round when drawing the window. If the corner radius
     # is set to 0 this option will be ignored.
     #
     # Comma-separated list of the corners. The accepted corner values are bottom-right,
     # bottom-left, top-right, top-left, top, bottom, left, right or all.
-    corners = all
+    corners = left,bottom
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -344,22 +344,24 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    background = "#3f645a"
+    foreground = "#ffffff"
+		frame_color = "#ffffff"
     timeout = 10
     # Icon for notifications with low urgency
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#285577"
-    foreground = "#ffffff"
+    background = "#ffffff"    #285577
+    foreground = "#000000"
+		frame_color = "#000000"
     timeout = 10
     override_pause_level = 30
     # Icon for notifications with normal urgency
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#900000"
+    background = "#700000"
     foreground = "#ffffff"
     frame_color = "#ff0000"
     timeout = 0
